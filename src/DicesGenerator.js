@@ -23,12 +23,12 @@ let DicesGenerator = (function() {
 
     function createInstance() {
         return Object.freeze({
-            
+
 
             getD4roll: function(number_of_dices) {
                 return _getDicesRoll(number_of_dices, 4);
             },
-            
+
             getD6roll: function(number_of_dices) {
                 return _getDicesRoll(number_of_dices, 6);
             },
