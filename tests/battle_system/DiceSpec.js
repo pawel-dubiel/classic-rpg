@@ -23,7 +23,7 @@ describe("DicesGenerator", function() {
 
    var one= false,two=false,three=false,four=false,five=false,six=false;
    var dice_gen = DicesGenerator.getInstance();
-   var t = dice_gen.getCubeDiceRoll(100);
+   var t = dice_gen.getD6roll(100);
    expect(t.length).toEqual(100);
 
    t.forEach(function( v ) {
@@ -63,35 +63,35 @@ describe("DicesGenerator", function() {
 
     dice_gen1 = DicesGenerator.getInstance(seed);
 
-    d1 = dice_gen1.getCubeDiceRoll(10);
+    d1 = dice_gen1.getD6roll(10);
     dice_gen1.reset(seed);   
 
-    d2 = dice_gen1.getCubeDiceRoll(10);
+    d2 = dice_gen1.getD6roll(10);
     expect(d1.compare(d2) ).toBeTruthy(true,err1 );
 
     dice_gen2 = DicesGenerator.getInstance(seed);
-    d3 = dice_gen2.getCubeDiceRoll(10);
+    d3 = dice_gen2.getD6roll(10);
     expect(d1.compare(d3) ).toBeTruthy(true,err1);
 
     dice_gen3 = DicesGenerator.getInstance(seed);
-    d4 = dice_gen3.getCubeDiceRoll(10);
+    d4 = dice_gen3.getD6roll(10);
     expect(d3.compare(d4) ).toBeTruthy(true,err1);
 
 
    //test passing multiple seeds
    dice_gen4 = DicesGenerator.getInstance(seed,1,2,3);
-   d5=  dice_gen4.getCubeDiceRoll(5); 
+   d5=  dice_gen4.getD6roll(5); 
    
    dice_gen5 = DicesGenerator.getInstance(seed,1,2,3);
-   d6 = dice_gen5.getCubeDiceRoll(5);
+   d6 = dice_gen5.getD6roll(5);
    expect(d5.compare(d6) ).toBeTruthy(true,err1);
 
 
    dice_gen6 = DicesGenerator.getInstance(seed,1,2,3,5,6);
-   d7 = dice_gen6.get20DiceRoll(30);
+   d7 = dice_gen6.getD20roll(30);
 
    dice_gen7 = DicesGenerator.getInstance(seed,1,2,3,5,6);
-   d8 = dice_gen7.get20DiceRoll(30);
+   d8 = dice_gen7.getD20roll(30);
    expect(d7.compare(d8) ).toBeTruthy(true,err1);
 
 
