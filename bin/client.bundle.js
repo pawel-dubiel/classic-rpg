@@ -44,7 +44,8 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	
+	//todo
+	"use strict";
 
 /***/ }
 /******/ ]);

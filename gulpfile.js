@@ -11,7 +11,7 @@ gulp.task('lint', () => {
 
 
 gulp.task('beautify', () => {
-    return gulp.src(['src/**/*.js', '*.js', '!node_modules/**'], {
+    return gulp.src(['src/**/*.js', '*.js', 'webpack.config.js', 'tests/**/*.js', '!node_modules/**'], {
             base: "./"
         })
         .pipe(beautify({
